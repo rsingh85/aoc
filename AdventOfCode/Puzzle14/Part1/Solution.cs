@@ -8,7 +8,7 @@ namespace AdventOfCode.Puzzle14.Part1
     {
         public void Run()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

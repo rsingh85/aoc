@@ -105,7 +105,6 @@ namespace AdventOfCode.Puzzle13.Part2
                     earliestTimestampFound = true;
                     _success = true;
 
-                    File.WriteAllText(@"C:\Dev\Puzzle13-Part2-Answer.txt", actualStartTimestamp.ToString());
                     Console.WriteLine(actualStartTimestamp);
                     Console.WriteLine($"Time taken: {(endTime - _startTime).TotalSeconds}");
                 }

@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            ISolution solution = new Puzzle18.Part2.Solution();
+            ISolution solution = new Puzzle19.Part2.Solution();
             solution.Run();
 
             Console.WriteLine("Press any key to quit");

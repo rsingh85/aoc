@@ -46,6 +46,8 @@
     <Compile Include="ISolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puzzle15\Part1\Solution.cs" />
+    <Compile Include="Puzzle15\Part2\Solution.cs" />
     <Compile Include="Puzzle14\Part1\Solution.cs" />
     <Compile Include="Puzzle14\Part2\Solution.cs" />
     <Compile Include="Puzzle13\Part1\Solution.cs" />
@@ -79,6 +81,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Puzzle15\Part1\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzle15\Part2\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Puzzle14\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

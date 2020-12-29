@@ -46,6 +46,7 @@
     <Compile Include="ISolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puzzle25\Part1\Solution.cs" />
     <Compile Include="Puzzle24\Part1\Solution.cs" />
     <Compile Include="Puzzle24\Part2\Solution.cs" />
     <Compile Include="Puzzle23\Part1\Solution.cs" />

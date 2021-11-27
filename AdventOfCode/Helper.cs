@@ -6,13 +6,13 @@ namespace AdventOfCode
     {
         public static string GetInputFilePath(Type solutionType)
         {
-            var solutionNamespace = 
+            var solutionPath = 
                 solutionType
                     .Namespace
                         .Replace("AdventOfCode.", string.Empty)
                         .Replace(".", @"\");
 
-            return $"{solutionNamespace}\\Input.txt";
+            return $"{solutionPath}\\Input.txt";
         }
     }
 }

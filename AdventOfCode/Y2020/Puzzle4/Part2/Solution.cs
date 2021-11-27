@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Puzzle4.Part2
+namespace AdventOfCode.Y2020.Puzzle4.Part2
 {
     public class Solution : ISolution
     {

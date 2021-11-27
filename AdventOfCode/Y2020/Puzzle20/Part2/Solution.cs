@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Text;
 
-namespace AdventOfCode.Puzzle20.Part2
+namespace AdventOfCode.Y2020.Puzzle20.Part2
 {
     public class Solution : ISolution
     {

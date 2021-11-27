@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace AdventOfCode.Puzzle22.Part2
+namespace AdventOfCode.Y2020.Puzzle22.Part2
 {
     public class Solution : ISolution
     {

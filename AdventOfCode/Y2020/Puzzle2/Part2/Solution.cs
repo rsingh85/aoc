@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Puzzle2.Part2
+namespace AdventOfCode.Y2020.Puzzle2.Part2
 {
     public class Solution : ISolution
     {

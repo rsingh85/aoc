@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace AdventOfCode.Puzzle11.Part2
+namespace AdventOfCode.Y2020.Puzzle11.Part2
 {
     public class Solution : ISolution
     {

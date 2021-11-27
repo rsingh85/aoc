@@ -19,7 +19,7 @@ namespace AdventOfCode.Y2020.Puzzle24.Part1
             // white == false, black == true
             var tiles = new Dictionary<string, bool>();
 
-            var directions = File.ReadAllLines(@"Y2020\Puzzle24\Part1\Input.txt");
+            var directions = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
 
             foreach (var direction in directions)
             {

@@ -10,7 +10,7 @@ namespace AdventOfCode.Puzzle12.Part2
         public void Run()
         {
             var instructions =
-                File.ReadAllLines(@"Y2020\Puzzle12\Part2\Input.txt")
+                File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
                     .Select(i => new Instruction(i));
 
             var eastWestPosition = 0; // east = positive, west = negative

@@ -16,7 +16,7 @@ namespace AdventOfCode.Puzzle24.Part2
          */
         public void Run()
         {
-            var directions = File.ReadAllLines(@"Y2020\Puzzle24\Part2\Input.txt");
+            var directions = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             var tiles = ReadTiles(directions);
 
             var currentDay = 1;

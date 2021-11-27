@@ -9,11 +9,11 @@ namespace AdventOfCode.Puzzle8.Part2
     {
         public void Run()
         {
-            var program = ParseProgram(File.ReadAllLines(@"Y2020\Puzzle8\Part2\Input.txt"));
+            var program = ParseProgram(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
 
             while (!ExecuteProgram(program))
             {
-                program = ResetProgramCommands(File.ReadAllLines(@"Y2020\Puzzle8\Part2\Input.txt"), program);
+                program = ResetProgramCommands(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))), program);
                 
                 for (var i = 0; i < program.Count; i++)
                 {

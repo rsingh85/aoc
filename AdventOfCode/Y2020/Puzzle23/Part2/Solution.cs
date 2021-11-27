@@ -15,7 +15,7 @@ namespace AdventOfCode.Puzzle23.Part2
         {
             var startTime = DateTime.Now;
 
-            ParseInput(File.ReadAllLines(@"Y2020\Puzzle23\Part2\Input.txt"));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
 
             // add the numbers up to 1 million (from max input number)!
             var maxCupNumber = _cups.Max(); // Using Max() is fine as the list will be small at this point

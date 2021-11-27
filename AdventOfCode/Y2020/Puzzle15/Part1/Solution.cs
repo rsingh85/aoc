@@ -9,7 +9,7 @@ namespace AdventOfCode.Y2020.Puzzle15.Part1
     {
         public void Run()
         {
-            var input = File.ReadAllLines(@"Y2020\Puzzle15\Part1\Input.txt")
+            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
                 .First()
                 .Split(',')
                 .Select(int.Parse)

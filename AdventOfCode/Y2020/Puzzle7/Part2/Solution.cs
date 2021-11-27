@@ -11,7 +11,7 @@ namespace AdventOfCode.Puzzle7.Part2
 
         public void Run()
         {
-            var rulesInEnglish = File.ReadAllLines(@"Y2020\Puzzle7\Part2\Input.txt");
+            var rulesInEnglish = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             rules = ParseEnglishRules(rulesInEnglish);
 
             var totalBags = FindBagsInside(rules["shiny gold bag"]);

@@ -15,7 +15,7 @@ namespace AdventOfCode.Y2020.Puzzle22.Part1
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(@"Y2020\Puzzle22\Part1\Input.txt"));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
 
             var round = 1;
 

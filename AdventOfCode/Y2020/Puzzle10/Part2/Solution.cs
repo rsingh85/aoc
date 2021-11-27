@@ -10,7 +10,7 @@ namespace AdventOfCode.Y2020.Puzzle10.Part2
         public void Run()
         {
             var adapters =
-                File.ReadAllLines(@"Y2020\Puzzle10\Part2\Input.txt")
+                File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
                     .Select(int.Parse)
                     .OrderBy(j => j)
                     .ToList();

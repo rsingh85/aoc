@@ -19,7 +19,7 @@ namespace AdventOfCode.Puzzle13.Part2
         {
             _startTime = DateTime.Now;
 
-            var input = File.ReadAllLines(@"Y2020\Puzzle13\Part2\Input.txt");
+            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             var busMinuteFrequencies = input[1].Split(',');
 
             for (var i = 0; i < busMinuteFrequencies.Length; i++)

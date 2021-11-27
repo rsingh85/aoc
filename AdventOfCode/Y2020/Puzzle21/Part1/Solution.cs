@@ -14,7 +14,7 @@ namespace AdventOfCode.Y2020.Puzzle21.Part1
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(@"Y2020\Puzzle21\Part1\Input.txt"));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
 
             foreach (var allergen in _allergens)
             {

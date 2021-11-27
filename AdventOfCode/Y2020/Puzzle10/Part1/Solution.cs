@@ -10,7 +10,7 @@ namespace AdventOfCode.Y2020.Puzzle10.Part1
         public void Run()
         {
             var adapterOutputJoltages =
-                File.ReadAllLines(@"Y2020\Puzzle10\Part1\Input.txt")
+                File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
                     .Select(int.Parse)
                     .OrderBy(j => j)
                     .ToList();

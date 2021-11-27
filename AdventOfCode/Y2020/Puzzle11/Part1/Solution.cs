@@ -8,7 +8,7 @@ namespace AdventOfCode.Y2020.Puzzle11.Part1
         private string[] input;
         public void Run()
         {
-            input = File.ReadAllLines(@"Y2020\Puzzle11\Part1\Input.txt");
+            input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
 
             var originalSeatLayout = new char[input.Length, input[0].Length];
 

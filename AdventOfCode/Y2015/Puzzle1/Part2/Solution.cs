@@ -8,7 +8,7 @@ namespace AdventOfCode.Y2015.Puzzle1.Part2
     {
         public void Run()
         {
-            var directions = File.ReadAllLines(@"Y2015\Puzzle1\Part2\Input.txt").First();
+            var directions = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))).First();
 
             var floor = 0;
 

@@ -13,7 +13,7 @@ namespace AdventOfCode.Y2020.Puzzle19.Part1
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(@"Y2020\Puzzle19\Part1\Input.txt"));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
             var regex = BuildRegexFromRules(ruleIndex: 0);
 
             var validMessageCount = 0;

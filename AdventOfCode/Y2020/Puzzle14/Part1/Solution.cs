@@ -10,7 +10,7 @@ namespace AdventOfCode.Y2020.Puzzle14.Part1
     {
         public void Run()
         {
-            var lines = File.ReadAllLines(@"Y2020\Puzzle14\Part1\Input.txt");
+            var lines = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             var memoryAddresses = new Dictionary<string, long>();
             var currentMask = string.Empty;
 

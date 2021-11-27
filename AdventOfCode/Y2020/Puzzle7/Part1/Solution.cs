@@ -9,7 +9,7 @@ namespace AdventOfCode.Y2020.Puzzle7.Part1
     {
         public void Run()
         {
-            var rulesInEnglish = File.ReadAllLines(@"Y2020\Puzzle7\Part1\Input.txt");
+            var rulesInEnglish = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             var rules = ParseEnglishRules(rulesInEnglish);
             var outerBagsThatCanContainShinyGoldBag = 0;
 

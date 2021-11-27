@@ -7,7 +7,7 @@ namespace AdventOfCode.Y2020.Puzzle3.Part1
     {
         public void Run()
         {
-            var grid = File.ReadAllLines(@"Y2020\Puzzle3\Part1\Input.txt");
+            var grid = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
             var colIndex = 3;
             var treesEncountered = 0;
 

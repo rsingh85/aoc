@@ -8,7 +8,7 @@ namespace AdventOfCode.Puzzle3.Part2
     {
         public void Run()
         {
-            var grid = File.ReadAllLines(@"Y2020\Puzzle3\Part2\Input.txt");
+            var grid = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
 
             var routes = new List<Route>
                          {

@@ -8,7 +8,7 @@ namespace AdventOfCode.Puzzle17.Part2
     {
         public void Run()
         {
-            var input = File.ReadAllLines(@"Y2020\Puzzle17\Part2\Input.txt");
+            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
 
             var currentGenActivePoints = new List<Point>();
 

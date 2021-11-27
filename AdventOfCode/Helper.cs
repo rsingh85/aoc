@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode
 {
@@ -10,13 +6,13 @@ namespace AdventOfCode
     {
         public static string GetInputFilePath(Type solutionType)
         {
-            var parsedNamespace = 
+            var solutionNamespace = 
                 solutionType
                     .Namespace
                         .Replace("AdventOfCode.", string.Empty)
-                        .Replace(".", "\\");
+                        .Replace(".", @"\");
 
-            return $"{parsedNamespace}\\Input.txt";
+            return $"{solutionNamespace}\\Input.txt";
         }
     }
 }

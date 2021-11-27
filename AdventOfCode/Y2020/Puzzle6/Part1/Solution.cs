@@ -9,7 +9,7 @@ namespace AdventOfCode.Y2020.Puzzle6.Part1
     {
         public void Run()
         {
-            var groups = string.Join(string.Empty, File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
+            var groups = string.Join(string.Empty, File.ReadAllLines(Helper.GetInputFilePath(this))
                 .Select(l => l == string.Empty ? "-" : l))
                 .Split('-');
 

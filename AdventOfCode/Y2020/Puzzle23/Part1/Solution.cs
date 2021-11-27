@@ -11,7 +11,7 @@ namespace AdventOfCode.Y2020.Puzzle23.Part1
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(this)));
 
             var currentCup = _cups[0];
             var currentMove = 1;

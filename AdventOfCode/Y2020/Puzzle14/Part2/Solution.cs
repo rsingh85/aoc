@@ -11,7 +11,7 @@ namespace AdventOfCode.Puzzle14.Part2
     {
         public void Run()
         {
-            var lines = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var lines = File.ReadAllLines(Helper.GetInputFilePath(this));
             var memoryAddresses = new Dictionary<string, long>();
             var currentMask = string.Empty;
 

@@ -9,7 +9,7 @@ namespace AdventOfCode.Y2020.Puzzle8.Part1
     {
         public void Run()
         {
-            var program = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var program = File.ReadAllLines(Helper.GetInputFilePath(this));
             var executedLines = new List<bool>(program.Length);
 
             for (var i = 0; i < program.Length; i++)

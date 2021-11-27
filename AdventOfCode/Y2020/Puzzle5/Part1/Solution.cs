@@ -10,7 +10,7 @@ namespace AdventOfCode.Y2020.Puzzle5.Part1
     {
         public void Run()
         {
-            var boardingPasses = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var boardingPasses = File.ReadAllLines(Helper.GetInputFilePath(this));
             var seatIdentifiers = new List<int>();
 
             foreach (var boardingPass in boardingPasses)

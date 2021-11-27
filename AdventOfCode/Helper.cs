@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace AdventOfCode
+﻿namespace AdventOfCode
 {
     public static class Helper
     {
-        public static string GetInputFilePath(Type solutionType)
+        public static string GetInputFilePath(ISolution solution)
         {
             var solutionPath = 
-                solutionType
+                solution.GetType()
                     .Namespace
                         .Replace("AdventOfCode.", string.Empty)
                         .Replace(".", @"\");

@@ -9,7 +9,7 @@ namespace AdventOfCode.Puzzle15.Part2
     {
         public void Run()
         {
-            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
+            var input = File.ReadAllLines(Helper.GetInputFilePath(this))
                 .First()
                 .Split(',')
                 .Select(long.Parse)

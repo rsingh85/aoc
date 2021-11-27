@@ -8,7 +8,7 @@ namespace AdventOfCode.Y2020.Puzzle13.Part1
     {
         public void Run()
         {
-            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var input = File.ReadAllLines(Helper.GetInputFilePath(this));
             var earliestTimeStamp = int.Parse(input[0]);
             var busIdsAndFrequencies = input[1].Split(',').Where(i => i != "x").Select(int.Parse).OrderBy(i => i);
 

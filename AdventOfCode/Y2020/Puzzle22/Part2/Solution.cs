@@ -12,7 +12,7 @@ namespace AdventOfCode.Puzzle22.Part2
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(this)));
 
             var playerOneWins = PlayGame(_playerOneInitialDeck, _playerTwoInitialDeck, game: 1);
 

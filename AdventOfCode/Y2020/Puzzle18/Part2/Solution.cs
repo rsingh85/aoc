@@ -10,7 +10,7 @@ namespace AdventOfCode.Puzzle18.Part2
     {
         public void Run()
         {
-            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var input = File.ReadAllLines(Helper.GetInputFilePath(this));
             long sum = 0;
 
             foreach (var expression in input)

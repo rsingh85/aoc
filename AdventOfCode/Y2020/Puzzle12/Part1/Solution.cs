@@ -10,7 +10,7 @@ namespace AdventOfCode.Y2020.Puzzle12.Part1
         public void Run()
         {
             var instructions =
-                File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)))
+                File.ReadAllLines(Helper.GetInputFilePath(this))
                     .Select(i => new Instruction(i));
 
             var currentDirection = Direction.East;

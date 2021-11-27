@@ -8,7 +8,7 @@ namespace AdventOfCode.Y2020.Puzzle2.Part1
     {
         public void Run()
         {
-            var policyAndPasswords = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            var policyAndPasswords = File.ReadAllLines(Helper.GetInputFilePath(this));
             var validPasswordCount = 0;
 
             foreach (var policyAndPassword in policyAndPasswords)

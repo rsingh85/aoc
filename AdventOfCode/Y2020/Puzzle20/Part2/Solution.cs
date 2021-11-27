@@ -14,7 +14,7 @@ namespace AdventOfCode.Puzzle20.Part2
 
         public void Run()
         {
-            var tiles = ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
+            var tiles = ParseInput(File.ReadAllLines(Helper.GetInputFilePath(this)));
             var tileOrientations = GetTileOrientations(tiles);
             var stichedTiles = StitchTiles(tiles, tileOrientations);
             var topLeftTile = stichedTiles.Single(t => t.TopTile == null && t.LeftTile == null);

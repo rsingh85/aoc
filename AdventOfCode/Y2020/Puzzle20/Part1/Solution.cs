@@ -12,7 +12,7 @@ namespace AdventOfCode.Y2020.Puzzle20.Part1
 
         public void Run()
         {
-            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))));
+            ParseInput(File.ReadAllLines(Helper.GetInputFilePath(this)));
 
             long productOfCornerTileNumbers = 0;
 

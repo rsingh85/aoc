@@ -9,7 +9,7 @@ namespace AdventOfCode.Y2020.Puzzle9.Part1
     {
         public void Run()
         {
-            var input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution))).Select(long.Parse).ToList();
+            var input = File.ReadAllLines(Helper.GetInputFilePath(this)).Select(long.Parse).ToList();
 
             const int PreambleLength = 25;
 

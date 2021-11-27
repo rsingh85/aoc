@@ -9,7 +9,7 @@ namespace AdventOfCode.Puzzle11.Part2
 
         public void Run()
         {
-            input = File.ReadAllLines(Helper.GetInputFilePath(typeof(Solution)));
+            input = File.ReadAllLines(Helper.GetInputFilePath(this));
             var originalSeatLayout = new char[input.Length, input[0].Length];
 
             // Read input into 2d array

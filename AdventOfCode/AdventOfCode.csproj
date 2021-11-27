@@ -46,202 +46,202 @@
     <Compile Include="ISolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puzzle25\Part1\Solution.cs" />
-    <Compile Include="Puzzle24\Part1\Solution.cs" />
-    <Compile Include="Puzzle24\Part2\Solution.cs" />
-    <Compile Include="Puzzle23\Part1\Solution.cs" />
-    <Compile Include="Puzzle23\Part2\Solution.cs" />
-    <Compile Include="Puzzle22\Part1\Solution.cs" />
-    <Compile Include="Puzzle22\Part2\Solution.cs" />
-    <Compile Include="Puzzle21\Part1\Solution.cs" />
-    <Compile Include="Puzzle21\Part2\Solution.cs" />
-    <Compile Include="Puzzle20\Part1\Solution.cs" />
-    <Compile Include="Puzzle20\Part2\Solution.cs" />
-    <Compile Include="Puzzle19\Part1\Solution.cs" />
-    <Compile Include="Puzzle19\Part2\Solution.cs" />
-    <Compile Include="Puzzle18\Part1\Solution.cs" />
-    <Compile Include="Puzzle18\Part2\Solution.cs" />
-    <Compile Include="Puzzle17\Part1\Solution.cs" />
-    <Compile Include="Puzzle17\Part2\Solution.cs" />
-    <Compile Include="Puzzle16\Part1\Solution.cs" />
-    <Compile Include="Puzzle16\Part2\Solution.cs" />
-    <Compile Include="Puzzle15\Part1\Solution.cs" />
-    <Compile Include="Puzzle15\Part2\Solution.cs" />
-    <Compile Include="Puzzle14\Part1\Solution.cs" />
-    <Compile Include="Puzzle14\Part2\Solution.cs" />
-    <Compile Include="Puzzle13\Part1\Solution.cs" />
-    <Compile Include="Puzzle13\Part2\Solution.cs" />
-    <Compile Include="Puzzle12\Part1\Solution.cs" />
-    <Compile Include="Puzzle12\Part2\Solution.cs" />
-    <Compile Include="Puzzle11\Part1\Solution.cs" />
-    <Compile Include="Puzzle11\Part2\Solution.cs" />
-    <Compile Include="Puzzle10\Part1\Solution.cs" />
-    <Compile Include="Puzzle10\Part2\Solution.cs" />
-    <Compile Include="Puzzle9\Part1\Solution.cs" />
-    <Compile Include="Puzzle9\Part2\Solution.cs" />
-    <Compile Include="Puzzle8\Part1\Solution.cs" />
-    <Compile Include="Puzzle8\Part2\Solution.cs" />
-    <Compile Include="Puzzle7\Part1\Solution.cs" />
-    <Compile Include="Puzzle7\Part2\Solution.cs" />
-    <Compile Include="Puzzle6\Part1\Solution.cs" />
-    <Compile Include="Puzzle6\Part2\Solution.cs" />
-    <Compile Include="Puzzle5\Part1\Solution.cs" />
-    <Compile Include="Puzzle5\Part2\Solution.cs" />
-    <Compile Include="Puzzle4\Part1\Solution.cs" />
-    <Compile Include="Puzzle4\Part2\Solution.cs" />
-    <Compile Include="Puzzle3\Part1\Solution.cs" />
-    <Compile Include="Puzzle3\Part2\Solution.cs" />
-    <Compile Include="Puzzle2\Part1\Solution.cs" />
-    <Compile Include="Puzzle2\Part2\Solution.cs" />
-    <Compile Include="Puzzle1\Part1\Solution.cs" />
-    <Compile Include="Puzzle1\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle25\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle24\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle24\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle23\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle23\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle22\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle22\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle21\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle21\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle20\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle20\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle19\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle19\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle18\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle18\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle17\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle17\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle16\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle16\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle15\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle15\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle14\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle14\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle13\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle13\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle12\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle12\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle11\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle11\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle10\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle10\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle9\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle9\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle8\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle8\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle7\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle7\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle6\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle6\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle5\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle5\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle4\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle4\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle3\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle3\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle2\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle2\Part2\Solution.cs" />
+    <Compile Include="Y2020\Puzzle1\Part1\Solution.cs" />
+    <Compile Include="Y2020\Puzzle1\Part2\Solution.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Puzzle24\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle24\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle24\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle24\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle23\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle23\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle23\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle23\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle22\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle22\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle22\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle22\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle21\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle21\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle21\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle21\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle20\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle20\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle20\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle20\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle19\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle19\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle19\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle19\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle18\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle18\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle18\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle18\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle17\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle17\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle17\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle17\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle16\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle16\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle16\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle16\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle15\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle15\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle15\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle15\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle14\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle14\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle14\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle14\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle13\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle13\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle13\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle13\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle12\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle12\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle12\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle12\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle11\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle11\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle11\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle11\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle10\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle10\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle10\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle10\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle9\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle9\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle9\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle9\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle8\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle8\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle8\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle8\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle7\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle7\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle7\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle7\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle6\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle6\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle6\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle6\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle5\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle5\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle5\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle5\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle4\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle4\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle4\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle4\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle3\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle3\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle3\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle3\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle2\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle2\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle2\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle2\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle1\Part1\Input.txt">
+    <Content Include="Y2020\Puzzle1\Part1\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzle1\Part2\Input.txt">
+    <Content Include="Y2020\Puzzle1\Part2\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

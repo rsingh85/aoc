@@ -8,18 +8,11 @@ namespace AdventOfCode.Y2015.Puzzle1.Part1
     {
         public void Run()
         {
-            var directions = File.ReadAllLines(Helper.GetInputFilePath(this)).First();
-
-            var floor = 0;
-
-            foreach (var character in directions)
-            {
-                switch (character)
-                {
-                    case '(': floor++; break;
-                    case ')': floor--; break;
-                }
-            }
+            var floor = File.ReadAllLines(Helper.GetInputFilePath(this))
+                .First()
+                .AsQueryable()
+                .Select(d => d == '(' ? 1 : -1)
+                .Sum();
 
             Console.WriteLine(floor);
         }

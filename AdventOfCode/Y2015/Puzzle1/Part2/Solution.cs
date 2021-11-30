@@ -28,7 +28,6 @@ namespace AdventOfCode.Y2015.Puzzle1.Part2
                     break;
                 }
             }
-
         }
     }
 }

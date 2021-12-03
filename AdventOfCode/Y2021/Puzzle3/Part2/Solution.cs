@@ -22,26 +22,26 @@ namespace AdventOfCode.Y2021.Puzzle3.Part2
 
         private int FindRating(IEnumerable<string> candidates, int index, Rating rating)
         {
-            if (candidates.Count() > 1)
+            if (candidates.Count() == 1)
             {
-                var zeroes = candidates.Select(b => b[index]).Count(b => b == '0');
-                var ones = candidates.Select(b => b[index]).Count(b => b == '1');
-
-                if (zeroes > ones)
-                {
-                    return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '0' : b[index] == '1').ToList(), ++index, rating);
-                }
-                else if (ones > zeroes)
-                {
-                    return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '1' : b[index] == '0').ToList(), ++index, rating);
-                }
-                else
-                {
-                    return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '1' : b[index] == '0').ToList(), ++index, rating);
-                }
+                return Convert.ToInt32(candidates.First(), 2);
             }
 
-            return Convert.ToInt32(candidates.First(), 2);
+            var zeroes = candidates.Select(b => b[index]).Count(b => b == '0');
+            var ones = candidates.Select(b => b[index]).Count(b => b == '1');
+
+            if (zeroes > ones)
+            {
+                return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '0' : b[index] == '1').ToList(), ++index, rating);
+            }
+            else if (ones > zeroes)
+            {
+                return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '1' : b[index] == '0').ToList(), ++index, rating);
+            }
+            else
+            {
+                return FindRating(candidates.Where(b => (rating == Rating.OxygenGenerator) ? b[index] == '1' : b[index] == '0').ToList(), ++index, rating);
+            }
         }
     }
 }

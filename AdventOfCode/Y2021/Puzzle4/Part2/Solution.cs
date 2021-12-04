@@ -58,7 +58,7 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
 
     public class Board
     {
-        private BoardNumber[,] _board;
+        private BoardSquare[,] _board;
         private int _boardSize;
         
         public bool Won { get; private set; }
@@ -66,7 +66,7 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
 
         public Board(int boardSize)
         {
-            _board = new BoardNumber[boardSize, boardSize];
+            _board = new BoardSquare[boardSize, boardSize];
             _boardSize = boardSize;
         }
 
@@ -76,7 +76,7 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
 
             for (var colIndex = 0; colIndex < _boardSize; colIndex++)
             {
-                _board[rowIndex, colIndex] = new BoardNumber { Number = numbers[colIndex] };
+                _board[rowIndex, colIndex] = new BoardSquare { Number = numbers[colIndex] };
             }
         }
 
@@ -86,17 +86,17 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
             {
                 for (var col = 0; col < _boardSize; col++)
                 {
-                    var boardNumber = _board[row, col];
+                    var square = _board[row, col];
 
-                    if (boardNumber.Number == drawNumber)
+                    if (square.Number == drawNumber)
                     {
-                        boardNumber.Marked = true;
-                    }
+                        square.Marked = true;
 
-                    if (boardNumber.Marked && (IsRowComplete(row) || IsColumnComplete(col)))
-                    {
-                        Won = true;
-                        Score = SumUnmarked() * drawNumber;
+                        if (IsRowComplete(row) || IsColumnComplete(col))
+                        {
+                            Won = true;
+                            Score = SumUnmarked() * drawNumber;
+                        }
                     }
                 }
             }
@@ -136,11 +136,11 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
             {
                 for (var col = 0; col < _boardSize; col++)
                 {
-                    var boardNumber = _board[row, col];
+                    var square = _board[row, col];
 
-                    if (!boardNumber.Marked)
+                    if (!square.Marked)
                     {
-                        sum += boardNumber.Number;
+                        sum += square.Number;
                     }
                 }
             }
@@ -149,7 +149,7 @@ namespace AdventOfCode.Y2021.Puzzle4.Part2
         }
     }
 
-    public class BoardNumber
+    public class BoardSquare
     {
         public int Number { get; set; }
         public bool Marked { get; set; }

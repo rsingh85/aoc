@@ -15,7 +15,7 @@ namespace AdventOfCode.Y2021.Puzzle5.Part2
             var input = File.ReadAllLines(Helper.GetInputFilePath(this));
             
             var lines = ReadLines(input);
-            var gridSize = GetGridSize(lines) + 1;
+            var gridSize = GetGridSize(lines);
 
             grid = new int[gridSize, gridSize];
             dangerousPointsSet = new HashSet<string>();
@@ -102,7 +102,7 @@ namespace AdventOfCode.Y2021.Puzzle5.Part2
                 lines.Select(l => l.B.Y).Max()
             };
 
-            return points.Max();
+            return points.Max() + 1;
         }
 
         private void AddPointToGrid(int x, int y)

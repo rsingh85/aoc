@@ -7,18 +7,14 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
 {
     public class Solution : ISolution
     {
-        private int[,] grid;
-        private HashSet<string> dangerousPointsSet;
+        private Dictionary<string, int> _ventPointsAndOverlaps;
 
         public void Run()
         {
             var input = File.ReadAllLines(Helper.GetInputFilePath(this));
-            
             var lines = ReadLines(input);
-            var gridSize = GetGridSize(lines);
 
-            grid = new int[gridSize, gridSize];
-            dangerousPointsSet = new HashSet<string>();
+            _ventPointsAndOverlaps = new Dictionary<string, int>();
 
             foreach (var line in lines.Where(l => l.IsHorizontalOrVertical))
             {
@@ -29,7 +25,7 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
                     
                     for (var x = minX; x <= maxX; x++)
                     {
-                        AddPointToGrid(x, line.A.Y);
+                        AddPoint(x, line.A.Y);
                     }
                 }
                 else
@@ -39,12 +35,12 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
 
                     for (var y = minY; y <= maxY; y++)
                     {
-                        AddPointToGrid(line.A.X, y);
+                        AddPoint(line.A.X, y);
                     }
                 }
             }
 
-            Console.WriteLine(dangerousPointsSet.Count);
+            Console.WriteLine(_ventPointsAndOverlaps.Values.Count(overlaps => overlaps > 1));
         }
         
         private IEnumerable<Line> ReadLines(string[] input)
@@ -77,26 +73,17 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
             return lines;
         }
 
-        private int GetGridSize(IEnumerable<Line> lines)
+        private void AddPoint(int x, int y)
         {
-            var points = new List<int>
+            var pointKey = $"{x},{y}";
+
+            if (_ventPointsAndOverlaps.ContainsKey(pointKey))
             {
-                lines.Select(l => l.A.X).Max(),
-                lines.Select(l => l.A.Y).Max(),
-                lines.Select(l => l.B.X).Max(),
-                lines.Select(l => l.B.Y).Max()
-            };
-
-            return points.Max() + 1;
-        }
-
-        private void AddPointToGrid(int x, int y)
-        {
-            grid[x, y]++;
-
-            if (grid[x, y] > 1)
+                _ventPointsAndOverlaps[pointKey]++;
+            }
+            else
             {
-                dangerousPointsSet.Add($"{x},{y}");
+                _ventPointsAndOverlaps.Add(pointKey, 1);
             }
         }
     }
@@ -107,13 +94,11 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
         public Point B { get; set; }
         public bool IsHorizontalOrVertical => (A.X == B.X) || (A.Y == B.Y);
         public bool IsHorizontal => A.Y == B.Y;
-        public override string ToString() => $"{A.X},{A.Y} -> {B.X},{B.Y}";
     }
 
     public class Point
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public override string ToString() => $"{X},{Y}";
     }
 }

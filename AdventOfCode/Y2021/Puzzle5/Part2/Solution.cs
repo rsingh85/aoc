@@ -87,6 +87,7 @@ namespace AdventOfCode.Y2021.Puzzle5.Part2
 
             return lines;
         }
+
         private void AddPoint(int x, int y)
         {
             var pointKey = $"{x},{y}";

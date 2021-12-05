@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace AdventOfCode.Y2021.Puzzle5.Part1
+﻿namespace AdventOfCode.Y2021.Puzzle5.Part1
 {
     public class Solution : ISolution
     {
@@ -14,7 +9,7 @@ namespace AdventOfCode.Y2021.Puzzle5.Part1
             var input = File.ReadAllLines(Helper.GetInputFilePath(this));
             var lines = ReadLines(input);
 
-            _ventPointsAndOverlaps = new Dictionary<string, int>();
+            _ventPointsAndOverlaps = new();
 
             foreach (var line in lines.Where(l => l.IsHorizontalOrVertical))
             {

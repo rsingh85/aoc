@@ -18,13 +18,13 @@
 
             for (var day = 1; day <= MaxDays; day++)
             {
-                var zeroTimersCount = timerCounts[0];
+                var zeroTimerCount = timerCounts[0];
 
                 for (var timer = 0; timer <= MaxTimer; timer++)
                 {
                     if (timer == 8)
                     {
-                        timerCounts[timer] = zeroTimersCount;
+                        timerCounts[timer] = zeroTimerCount;
                         continue;
                     }
 
@@ -32,7 +32,7 @@
 
                     if (timer == 6)
                     {
-                        timerCounts[timer] += zeroTimersCount;
+                        timerCounts[timer] += zeroTimerCount;
                     }
                 }
             }

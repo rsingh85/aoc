@@ -25,7 +25,7 @@
         }
     }
 
-    public class TargetPosition
+    public struct TargetPosition
     {
         public int Position { get; set; }
         public int TotalFuelCost { get; set; }

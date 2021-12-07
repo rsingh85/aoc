@@ -15,7 +15,7 @@
                 foreach (var currentPosition in positions)
                 {
                     var fuelCost = Math.Abs(targetPosition - currentPosition);
-                    totalFuelForPosition += CalculateFuelCost(fuelCost);
+                    totalFuelForPosition += fuelCost * (fuelCost + 1) / 2;
                 }
 
                 targetPositions.Add(new TargetPosition { Position = targetPosition, TotalFuelCost = totalFuelForPosition });
@@ -23,19 +23,8 @@
 
             Console.WriteLine(targetPositions.OrderBy(tp => tp.TotalFuelCost).First().TotalFuelCost);
         }
-
-        private int CalculateFuelCost(int basicCost)
-        {
-            var fuelCost = 0;
-
-            for (var i = 1; i <= basicCost; i++)
-            {
-                fuelCost += i;
-            }
-
-            return fuelCost;
-        }
     }
+
     public class TargetPosition
     {
         public int Position { get; set; }

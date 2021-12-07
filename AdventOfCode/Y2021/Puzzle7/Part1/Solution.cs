@@ -24,6 +24,7 @@
             Console.WriteLine(targetPositions.OrderBy(tp => tp.TotalFuelCost).First().TotalFuelCost);
         }
     }
+
     public class TargetPosition
     {
         public int Position { get; set; }

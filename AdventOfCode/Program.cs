@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            ISolution solution = new Y2021.Puzzle7.Part2.Solution();
+            ISolution solution = new Y2021.Puzzle8.Part1.Solution();
 
             Console.WriteLine(solution.GetType().Namespace);
 

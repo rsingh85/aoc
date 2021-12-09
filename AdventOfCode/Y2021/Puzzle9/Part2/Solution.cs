@@ -3,21 +3,21 @@
     public class Solution : ISolution
     {
         private int[,] _grid;
-        private int maxRows;
-        private int maxCols;
+        private int _maxRows;
+        private int _maxCols;
         private List<string> _usedLocations = new List<string>();
 
         public void Run()
         {
             var input = File.ReadAllLines(Helper.GetInputFilePath(this));
 
-            maxRows = input.Length;
-            maxCols = input.First().Length;
-            _grid = new int[maxRows, maxCols];
+            _maxRows = input.Length;
+            _maxCols = input.First().Length;
+            _grid = new int[_maxRows, _maxCols];
 
-            for (var r = 0; r < maxRows; r++)
+            for (var r = 0; r < _maxRows; r++)
             {
-                for (var c = 0; c < maxCols; c++)
+                for (var c = 0; c < _maxCols; c++)
                 {
                     _grid[r, c] = Convert.ToInt32(input[r][c].ToString());
                 }
@@ -25,15 +25,15 @@
 
             var basins = new List<int>();
 
-            for (var r = 0; r < maxRows; r++)
+            for (var r = 0; r < _maxRows; r++)
             {
-                for (var c = 0; c < maxCols; c++)
+                for (var c = 0; c < _maxCols; c++)
                 {
                     var height = _grid[r, c];
                     var top = r == 0 ? 10 : _grid[r - 1, c];
                     var left = c == 0 ? 10 : _grid[r, c - 1];
-                    var right = c == maxCols - 1 ? 10 : _grid[r, c + 1];
-                    var bottom = r == maxRows - 1 ? 10 : _grid[r + 1, c];
+                    var right = c == _maxCols - 1 ? 10 : _grid[r, c + 1];
+                    var bottom = r == _maxRows - 1 ? 10 : _grid[r + 1, c];
 
                     if (height < top && height < left && height < right && height < bottom)
                     {
@@ -54,7 +54,7 @@
 
         private int GetBasinSize(int r, int c, int previousHeight)
         {
-            if (r < 0 || r >= maxRows || c < 0 || c >= maxCols)
+            if (r < 0 || r >= _maxRows || c < 0 || c >= _maxCols)
             {
                 return 0;
             }

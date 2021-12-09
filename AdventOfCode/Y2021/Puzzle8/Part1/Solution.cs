@@ -11,10 +11,11 @@
             {
                 var splitLine = line.Split("|");
                 var digits = splitLine[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                var digitLengthsOfInterest = new List<int> { 2, 4, 3, 7 };
 
                 foreach (var digit in digits)
                 {
-                    if (digit.Length == 2 || digit.Length == 4 || digit.Length == 3 || digit.Length == 7)
+                    if (digitLengthsOfInterest.Contains(digit.Length))
                     {
                         count++;
                     }

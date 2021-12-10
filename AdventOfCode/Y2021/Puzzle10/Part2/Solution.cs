@@ -40,9 +40,8 @@ namespace AdventOfCode.Y2021.Puzzle10.Part2
         private bool HasSyntaxError(string line)
         {
             var stack = new Stack<char>();
-            var syntaxError = false;
 
-            for (var i = 0; i < line.Length && !syntaxError; i++)
+            for (var i = 0; i < line.Length; i++)
             {
                 var character = line[i];
 
@@ -70,8 +69,7 @@ namespace AdventOfCode.Y2021.Puzzle10.Part2
         private IEnumerable<string> GetCompletionLines(IEnumerable<string> incompleteLines)
         {
             var stack = new Stack<char>();
-
-            var reverseOpenCharMap = new Dictionary<char, char>
+            var openCloseCharMap = new Dictionary<char, char>
             {
                 { '(', ')' },
                 { '[', ']' },
@@ -97,7 +95,7 @@ namespace AdventOfCode.Y2021.Puzzle10.Part2
 
                 while (stack.Count > 0)
                 {
-                    completionString.Append(reverseOpenCharMap[stack.Pop()]);
+                    completionString.Append(openCloseCharMap[stack.Pop()]);
                 }
 
                 yield return completionString.ToString();

@@ -53,6 +53,7 @@
             Console.WriteLine(grid.Cast<Octopus>().Sum(o => o.Flashes));
         }
     }
+
     public class Octopus
     {
         public int Energy { get; private set; }

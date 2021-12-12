@@ -22,17 +22,11 @@
 
         private void FindPathsFrom(string currentCave, List<string> currentPath)
         {
-            if (IsSmallCave(currentCave) && currentPath.Contains(currentCave))
+            if (IsSmallCave(currentCave) && 
+                currentPath.Contains(currentCave) && 
+                (currentCave == "start" || AnySmallCaveHasBeenVisitedTwice(currentPath)))
             {
-                if (currentCave == "start")
-                {
-                    return;
-                }
-
-                if (AnySmallCaveHasBeenVisitedTwice(currentPath))
-                {
-                    return;
-                }
+                return;
             }
 
             currentPath.Add(currentCave);

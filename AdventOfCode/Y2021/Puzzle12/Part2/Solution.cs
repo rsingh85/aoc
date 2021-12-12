@@ -3,7 +3,7 @@
     public class Solution : ISolution
     {
         private List<Connection> _connections = new List<Connection>();
-        private List<string> _foundPaths = new List<string>();
+        private int _foundPaths;
 
         public void Run()
         {
@@ -17,7 +17,7 @@
 
             FindPathsFrom("start", Enumerable.Empty<string>().ToList());
 
-            Console.WriteLine(_foundPaths.Count);
+            Console.WriteLine(_foundPaths);
         }
 
         private void FindPathsFrom(string currentCave, List<string> currentPath)
@@ -33,7 +33,7 @@
 
             if (currentCave == "end")
             {
-                _foundPaths.Add(string.Join(',', currentPath));
+                _foundPaths++;
                 return;
             }
 

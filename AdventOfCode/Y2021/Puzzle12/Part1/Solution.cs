@@ -52,23 +52,9 @@ namespace AdventOfCode.Y2021.Puzzle12.Part1
                 }
             }
         }
-
         private bool IsSmallCave(string cave)
-        {
-            if (cave == "end")
-            {
-                return false;
-            }    
-
-            return Regex.IsMatch(cave, "[a-z]+");
-        }
+            => cave == "end" ? false : Regex.IsMatch(cave, "[a-z]+");
     }
 
-    public record Connection(string Start, string End)
-    {
-        public override string ToString()
-        {
-            return $"{Start}-{End}";
-        }
-    }
+    public record Connection(string Start, string End);
 }

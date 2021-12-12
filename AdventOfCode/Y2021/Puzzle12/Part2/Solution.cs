@@ -14,7 +14,7 @@ namespace AdventOfCode.Y2021.Puzzle12.Part2
             foreach (var line in lines)
             {
                 var splitLine = line.Split("-");
-                _connections.Add(new Connection { Start = splitLine[0], End = splitLine[1] });
+                _connections.Add(new Connection(splitLine[0], splitLine[1]));
             }
 
             FindPathsFrom("start", Enumerable.Empty<string>().ToList());
@@ -67,20 +67,9 @@ namespace AdventOfCode.Y2021.Puzzle12.Part2
             }
         }
 
-        private bool IsSmallCave(string cave)
-        {
-            if (cave == "end")
-            {
-                return false;
-            }    
-
-            return Regex.IsMatch(cave, "[a-z]+");
-        }
+        private bool IsSmallCave(string cave) 
+            => cave == "end" ? false : Regex.IsMatch(cave, "[a-z]+");
     }
 
-    public struct Connection
-    {
-        public string Start { get; set; }
-        public string End{ get; set; }
-    }
+    public record Connection(string Start, string End);
 }

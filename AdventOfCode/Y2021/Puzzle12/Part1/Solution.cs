@@ -22,7 +22,9 @@
 
         private void FindPathsFrom(string currentCave, List<string> currentPath)
         {
-            if (IsSmallCave(currentCave) && currentPath.Contains(currentCave))
+            if (currentCave != "end" && 
+                IsSmallCave(currentCave) && 
+                currentPath.Contains(currentCave))
             {
                 return;
             }
@@ -51,8 +53,7 @@
             }
         }
 
-        private bool IsSmallCave(string cave)
-            => cave == "end" ? false : char.IsLower(cave[0]);
+        private bool IsSmallCave(string cave) => char.IsLower(cave[0]);
     }
 
     public record Connection(string Start, string End);

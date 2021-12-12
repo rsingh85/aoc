@@ -22,7 +22,8 @@
 
         private void FindPathsFrom(string currentCave, List<string> currentPath)
         {
-            if (IsSmallCave(currentCave) && 
+            if (currentCave != "end" && 
+                IsSmallCave(currentCave) && 
                 currentPath.Contains(currentCave) && 
                 (currentCave == "start" || AnySmallCaveHasBeenVisitedTwice(currentPath)))
             {
@@ -53,8 +54,7 @@
             }
         }
 
-        private bool IsSmallCave(string cave)
-            => cave == "end" ? false : char.IsLower(cave[0]);
+        private bool IsSmallCave(string cave) => char.IsLower(cave[0]);
 
         private bool AnySmallCaveHasBeenVisitedTwice(List<string> path)
         {

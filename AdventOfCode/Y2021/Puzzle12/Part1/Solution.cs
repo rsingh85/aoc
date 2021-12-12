@@ -1,10 +1,8 @@
-﻿using System.Text.RegularExpressions;
-
-namespace AdventOfCode.Y2021.Puzzle12.Part1
+﻿namespace AdventOfCode.Y2021.Puzzle12.Part1
 {
     public class Solution : ISolution
     {
-        private List<Connection> _connections = new List<Connection>();
+        private List<Connection> _connections = new();
         private int _foundPaths;
 
         public void Run()
@@ -14,7 +12,7 @@ namespace AdventOfCode.Y2021.Puzzle12.Part1
             foreach (var line in lines)
             {
                 var splitLine = line.Split("-");
-                _connections.Add(new Connection(splitLine[0], splitLine[1]));
+                _connections.Add(new(splitLine[0], splitLine[1]));
             }
 
             FindPathsFrom("start", Enumerable.Empty<string>().ToList());

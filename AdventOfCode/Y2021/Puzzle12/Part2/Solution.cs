@@ -15,7 +15,7 @@
                 _connections.Add(new(splitLine[0], splitLine[1]));
             }
 
-            FindPathsFrom("start", Enumerable.Empty<string>().ToList());
+            FindPathsFrom("start", new());
 
             Console.WriteLine(_foundPaths);
         }
@@ -44,12 +44,12 @@
             {
                 if (connection.Start != currentCave)
                 {
-                    FindPathsFrom(connection.Start, new List<string>(currentPath));
+                    FindPathsFrom(connection.Start, new(currentPath));
                 }
 
                 if (connection.End != currentCave)
                 {
-                    FindPathsFrom(connection.End, new List<string>(currentPath));
+                    FindPathsFrom(connection.End, new(currentPath));
                 }
             }
         }

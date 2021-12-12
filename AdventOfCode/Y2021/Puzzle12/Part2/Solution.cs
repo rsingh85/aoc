@@ -29,13 +29,7 @@
                     return;
                 }
 
-                var smallCaveHasBeenVisitedTwice = 
-                    currentPath
-                        .Where(c => IsSmallCave(c))
-                        .GroupBy(c => c)
-                        .Any(g => g.Count() > 1);
-
-                if (smallCaveHasBeenVisitedTwice)
+                if (AnySmallCaveHasBeenVisitedTwice(currentPath))
                 {
                     return;
                 }
@@ -67,6 +61,23 @@
 
         private bool IsSmallCave(string cave)
             => cave == "end" ? false : char.IsLower(cave[0]);
+
+        private bool AnySmallCaveHasBeenVisitedTwice(List<string> path)
+        {
+            var visitedSmallCaves = new List<string>();
+
+            foreach (var cave in path.Where(c => IsSmallCave(c)))
+            {
+                if (visitedSmallCaves.Contains(cave))
+                {
+                    return true;
+                }
+
+                visitedSmallCaves.Add(cave);
+            }
+
+            return false;
+        }
     }
 
     public record Connection(string Start, string End);

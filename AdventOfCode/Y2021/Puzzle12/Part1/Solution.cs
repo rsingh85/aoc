@@ -54,7 +54,7 @@ namespace AdventOfCode.Y2021.Puzzle12.Part1
         }
 
         private bool IsSmallCave(string cave)
-            => cave == "end" ? false : Regex.IsMatch(cave, "[a-z]+");
+            => cave == "end" ? false : char.IsLower(cave[0]);
     }
 
     public record Connection(string Start, string End);

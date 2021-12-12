@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace AdventOfCode.Y2021.Puzzle12.Part2
+﻿namespace AdventOfCode.Y2021.Puzzle12.Part2
 {
     public class Solution : ISolution
     {
@@ -67,8 +65,8 @@ namespace AdventOfCode.Y2021.Puzzle12.Part2
             }
         }
 
-        private bool IsSmallCave(string cave) 
-            => cave == "end" ? false : Regex.IsMatch(cave, "[a-z]+");
+        private bool IsSmallCave(string cave)
+            => cave == "end" ? false : char.IsLower(cave[0]);
     }
 
     public record Connection(string Start, string End);

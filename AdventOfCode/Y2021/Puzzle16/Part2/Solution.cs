@@ -2,7 +2,6 @@
 {
     public class Solution : ISolution
     {
-        private int _versionSum = 0;
         private int _indexCursor = 0;
         private string _binary;
 
@@ -26,8 +25,6 @@
         {
             var version = Convert.ToInt32($"{_binary[_indexCursor++]}{_binary[_indexCursor++]}{_binary[_indexCursor++]}", 2);
             var typeId = Convert.ToInt32($"{_binary[_indexCursor++]}{_binary[_indexCursor++]}{_binary[_indexCursor++]}", 2);
-
-            _versionSum += version;
 
             if (typeId != 4)
             {

@@ -59,6 +59,7 @@
             {
                 var numberOfSubPackets = Convert.ToInt32(_binary.Substring(_indexCursor, 11), 2);
                 _indexCursor += 11;
+
                 for (var i = 0; i < numberOfSubPackets; i++)
                 {
                     packet.SubPackets.Add(ParsePacket());

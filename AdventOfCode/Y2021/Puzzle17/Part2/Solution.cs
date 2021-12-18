@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Y2021.Puzzle17.Part1
+﻿namespace AdventOfCode.Y2021.Puzzle17.Part2
 {
     public class Solution : ISolution
     {
@@ -6,43 +6,40 @@
 
         public void Run()
         {
-            var highestY = 0;
+            var set = new HashSet<string>();
 
             for (var xv = 1; xv <= _maxX; xv++)
             {
-                for (var yv = _maxY; yv <= 300; yv++)
+                for (var yv = -300; yv <= 300; yv++)
                 {
-                    var result = HitsTarget(xv,yv);
-
-                    if (result.TargetHit)
+                    if (HitsTarget(xv, yv))
                     {
-                        highestY = Math.Max(highestY, result.HighestY);
+                        set.Add($"{xv},{yv}");
                     }
                 }
             }
 
-            Console.WriteLine(highestY);
+            Console.WriteLine(set.Count());
         }
 
-        private (bool TargetHit, int HighestY) HitsTarget(int xVelocity, int yVelocity)
+        private bool HitsTarget(int xVelocity, int yVelocity)
         {
-            int x = 0, y = 0, highestY = 0;
+            int x = 0, y = 0;
             var stop = false;
+            var step = 1;
 
             while (!stop)
             {
                 x += xVelocity;
                 y += yVelocity;
 
-                highestY = Math.Max(highestY, y);
-
                 if (IsInTargetArea(x, y))
                 {
-                    return (true, highestY);
+                    return true;
                 }
                 else if (MissesTargetArea(x, y))
                 {
-                    return (false, 0);
+                    return false;
                 }
 
                 if (!stop)
@@ -53,10 +50,12 @@
                         xVelocity++;
 
                     yVelocity--;
+                    
+                    step++;
                 }
             }
 
-            return (false, 0);
+            return false;
         }
 
         private bool IsInTargetArea(int x, int y)

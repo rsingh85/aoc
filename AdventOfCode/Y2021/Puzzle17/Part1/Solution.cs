@@ -27,9 +27,8 @@
         private (bool TargetHit, int HighestY) HitsTarget(int xVelocity, int yVelocity)
         {
             int x = 0, y = 0, highestY = 0;
-            var stop = false;
 
-            while (!stop)
+            while (true)
             {
                 x += xVelocity;
                 y += yVelocity;
@@ -45,18 +44,17 @@
                     return (false, 0);
                 }
 
-                if (!stop)
+                if (xVelocity > 0)
                 {
-                    if (xVelocity > 0)
-                        xVelocity--;
-                    else if (xVelocity < 0)
-                        xVelocity++;
-
-                    yVelocity--;
+                    xVelocity--;
                 }
-            }
+                else if (xVelocity < 0)
+                {
+                    xVelocity++;
+                }
 
-            return (false, 0);
+                yVelocity--;
+            }
         }
 
         private bool IsInTargetArea(int x, int y)

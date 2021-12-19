@@ -25,10 +25,8 @@
         private bool HitsTarget(int xVelocity, int yVelocity)
         {
             int x = 0, y = 0;
-            var stop = false;
-            var step = 1;
 
-            while (!stop)
+            while (true)
             {
                 x += xVelocity;
                 y += yVelocity;
@@ -37,25 +35,23 @@
                 {
                     return true;
                 }
-                else if (MissesTargetArea(x, y))
+                
+                if (MissesTargetArea(x, y))
                 {
                     return false;
                 }
 
-                if (!stop)
+                if (xVelocity > 0)
                 {
-                    if (xVelocity > 0)
-                        xVelocity--;
-                    else if (xVelocity < 0)
-                        xVelocity++;
-
-                    yVelocity--;
-                    
-                    step++;
+                    xVelocity--;
                 }
-            }
+                else if (xVelocity < 0)
+                {
+                    xVelocity++;
+                }
 
-            return false;
+                yVelocity--;
+            }
         }
 
         private bool IsInTargetArea(int x, int y)

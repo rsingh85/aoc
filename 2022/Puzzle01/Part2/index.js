@@ -2,7 +2,7 @@ const readFileIntoArray = require("../../Core/ReadFileIntoArray");
 const input = readFileIntoArray("./data.txt");
 
 let currentElfCalories = 0;
-let elfCalories = [];
+const elfCalories = [];
 
 for (let i = 0; i < input.length; i++) {
     const calories = input[i];

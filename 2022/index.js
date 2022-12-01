@@ -1,0 +1,1 @@
+console.log("Advent of Code 2022 - JS (ES6/Node)");

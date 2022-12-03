@@ -7,16 +7,10 @@ const getPriority = function(item) {
     item.charCodeAt(0) - 65 + 27 : item.charCodeAt(0) - 97 + 1;
 };
 
-const commons = [];
-
-for (let i = 0; i < rucksacks.length; i += 3) {
-  commons.push(
-      _.intersection(rucksacks[i], rucksacks[i + 1], rucksacks [i + 2])[0],
-  );
-}
-
-const sum = commons
-    .map((c) => getPriority(c))
-    .reduce((acc, curr) => acc += curr);
+const sum =
+    _.chunk(rucksacks, 3)
+        .map((g) => _.intersection([...g[0]], [...g[1]], [...g[2]])[0])
+        .map((c) => getPriority(c))
+        .reduce((acc, curr) => acc += curr);
 
 console.log(sum);

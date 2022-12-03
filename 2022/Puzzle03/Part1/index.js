@@ -15,10 +15,9 @@ const getPriority = function(item) {
      ascii - 65 + 27 : ascii - 97 + 1;
 };
 
-const sum =
-  rucksacks
-      .map((r) => getCommon(r))
-      .map((c) => getPriority(c))
-      .reduce((acc, curr) => acc += curr);
+const sum = rucksacks
+    .map((r) => getCommon(r))
+    .map((c) => getPriority(c))
+    .reduce((acc, curr) => acc += curr);
 
 console.log(sum);

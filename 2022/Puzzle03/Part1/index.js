@@ -6,7 +6,7 @@ const getCommon = function(rucksack) {
   return _.intersection(
       [...rucksack.substring(0, rucksack.length / 2)],
       [...rucksack.substring(rucksack.length / 2, rucksack.length)],
-  )[0];
+  );
 };
 
 const getPriority = function(item) {
@@ -16,7 +16,7 @@ const getPriority = function(item) {
 };
 
 const sum = rucksacks
-    .map((r) => getCommon(r))
+    .map((r) => getCommon(r)[0])
     .map((c) => getPriority(c))
     .reduce((acc, curr) => acc += curr);
 

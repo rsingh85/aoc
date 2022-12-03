@@ -10,9 +10,8 @@ const getCommon = function(rucksack) {
 };
 
 const getPriority = function(item) {
-  const ascii = item.charCodeAt(0);
   return item === item.toUpperCase() ?
-     ascii - 65 + 27 : ascii - 97 + 1;
+    item.charCodeAt(0) - 65 + 27 : item.charCodeAt(0) - 97 + 1;
 };
 
 const sum = rucksacks

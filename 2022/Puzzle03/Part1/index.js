@@ -1,11 +1,11 @@
+const _ = require('underscore');
 const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const rucksacks = readFileSyncIntoArray('./data.txt');
-const _ = require('underscore');
 
 const getPriority = function(characterItem) {
-  const asciiDec = characterItem.charCodeAt(0);
+  const ascii = characterItem.charCodeAt(0);
   return characterItem === characterItem.toUpperCase() ?
-     asciiDec - 65 + 27 : asciiDec - 97 + 1;
+     ascii - 65 + 27 : ascii - 97 + 1;
 };
 
 let sum = 0;

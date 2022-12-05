@@ -3,15 +3,9 @@ const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const instructions = readFileSyncIntoArray('./data.txt');
 
 const stacksMap = new Map([
-  [1, [...'WBDNCFJ']],
-  [2, [...'PZVQLST']],
-  [3, [...'PZBGJT']],
-  [4, [...'DTLJZBHC']],
-  [5, [...'GVBJS']],
-  [6, [...'PSQ']],
-  [7, [...'BVDFLMPN']],
-  [8, [...'PSMFBDLR']],
-  [9, [...'VDTR']],
+  [1, [...'WBDNCFJ']], [2, [...'PZVQLST']], [3, [...'PZBGJT']],
+  [4, [...'DTLJZBHC']], [5, [...'GVBJS']], [6, [...'PSQ']],
+  [7, [...'BVDFLMPN']], [8, [...'PSMFBDLR']], [9, [...'VDTR']],
 ]);
 
 for (const instruction of instructions) {
@@ -25,10 +19,8 @@ for (const instruction of instructions) {
   });
 }
 
-let topCrates = '';
-
-for (const k of stacksMap.keys()) {
-  topCrates += stacksMap.get(k).pop();
-}
+const topCrates =
+  [...stacksMap.keys()]
+      .reduce((acc, curr) => acc += stacksMap.get(curr).pop(), '');
 
 console.log(topCrates);

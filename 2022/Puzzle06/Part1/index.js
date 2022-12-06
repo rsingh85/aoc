@@ -4,7 +4,8 @@ const data = readFileSyncIntoString('./data.txt');
 const scanLength = 4;
 
 for (let pointer = scanLength; pointer <= data.length; pointer++) {
-  if (_.uniq(data.slice(pointer - scanLength, pointer)).length === scanLength) {
+  const segment = [...data.slice(pointer - scanLength, pointer)];
+  if (_.uniq(segment).length === scanLength) {
     console.log(pointer);
     break;
   }

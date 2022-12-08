@@ -2,7 +2,7 @@ const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const trees = readFileSyncIntoArray('./data.txt');
 const grid = trees.map((t) => [...t]);
 const edgeVisibility = ((grid.length * 2) + (grid[0].length * 2)) - 4;
-let isVisible = 0;
+let innerVisibility = 0;
 
 const isVisibleFromAnyEdge = function(r, c) {
   const treeHeight = grid[r][c];
@@ -52,8 +52,8 @@ const isVisibleFromAnyEdge = function(r, c) {
 
 for (let r = 1; r < grid.length - 1; r++) {
   for (let c = 1; c < grid[r].length - 1; c++) {
-    isVisible += isVisibleFromAnyEdge(r, c) ? 1 : 0;
+    innerVisibility += isVisibleFromAnyEdge(r, c) ? 1 : 0;
   }
 }
 
-console.log(edgeVisibility + isVisible);
+console.log(edgeVisibility + innerVisibility);

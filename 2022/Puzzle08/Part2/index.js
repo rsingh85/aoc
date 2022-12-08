@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const trees = readFileSyncIntoArray('./data.txt');
 const grid = trees.map((t) => [...t]);
@@ -51,5 +50,6 @@ for (let r = 1; r < grid.length - 1; r++) {
   }
 }
 
-const results = [...treeVisibiityMap.keys()].map((k) => treeVisibiityMap.get(k));
+const results = [...treeVisibiityMap.keys()]
+    .map((k) => treeVisibiityMap.get(k));
 console.log(Math.max(...results));

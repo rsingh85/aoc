@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const trees = readFileSyncIntoArray('./data.txt');
 const grid = trees.map((t) => [...t]);

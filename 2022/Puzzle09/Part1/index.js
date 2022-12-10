@@ -3,9 +3,7 @@ const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const motions = readFileSyncIntoArray('./data.txt');
 const headPosition = {r: 0, c: 0};
 const tailPosition = {r: 0, c: 0};
-
-const visitedUniquePositionsByTail = new Set();
-visitedUniquePositionsByTail.add(`${tailPosition.r},${tailPosition.c}`);
+const visitedUniquePositionsByTail = new Set(['0,0']);
 
 for (const motion of motions) {
   const direction = motion.split(' ')[0];
@@ -19,7 +17,6 @@ for (const motion of motions) {
       case 'L': headPosition.c--; break;
     }
 
-    // if head and tail are next to each other or overlap, don't move tail
     const surroundingHeadPositions = [
       `${headPosition.r},${headPosition.c}`, // overlap
       `${headPosition.r + 1},${headPosition.c}`, // top
@@ -58,8 +55,7 @@ for (const motion of motions) {
 
     const newTailPosition =
       _.intersection(
-          possibleNewTailDiagonalPositions,
-          surroundingHeadPositions)[0];
+          possibleNewTailDiagonalPositions, surroundingHeadPositions)[0];
 
     tailPosition.r = Number(newTailPosition.split(',')[0]);
     tailPosition.c = Number(newTailPosition.split(',')[1]);

@@ -21,9 +21,7 @@ let signalStrengthSum = 0;
 const targetCycles = [20, 60, 100, 140, 180, 220];
 
 while (true) {
-  if (pointer === instructions.length) {
-    break;
-  }
+  if (pointer === instructions.length) break;
 
   cycle++;
 

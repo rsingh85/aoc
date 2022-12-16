@@ -1,4 +1,3 @@
-
 const readFileSyncIntoArray = require('../../Core/ReadFileSyncIntoArray');
 const mapInstruction = (ins) => {
   const op = ins.split(' ')[0];

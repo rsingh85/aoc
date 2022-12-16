@@ -20,9 +20,7 @@ let xRegister = 1;
 let signalStrengthSum = 0;
 const targetCycles = [20, 60, 100, 140, 180, 220];
 
-while (true) {
-  if (pointer === instructions.length) break;
-
+while (pointer < instructions.length) {
   cycle++;
 
   if (targetCycles.includes(cycle)) {

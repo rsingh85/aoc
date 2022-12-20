@@ -45,4 +45,4 @@ const sortedInspectionCounts =
   monkeys.map((m) => m.inspectionCount)
     .sort((a, b) => b - a);
 
-console.log((sortedInspectionCounts[0] * sortedInspectionCounts[1]));
+console.log(sortedInspectionCounts[0] * sortedInspectionCounts[1]);

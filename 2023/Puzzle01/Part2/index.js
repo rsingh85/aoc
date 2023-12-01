@@ -6,7 +6,7 @@ const insertAt = (str, sub, pos) =>
     `${str.slice(0, pos)}${sub}${str.slice(pos)}`;
 
 const replaceFirstAndLastWords = (str) => {
-    const dict = [
+    const infoDict = [
         { find: 'one', replace: '1', fi: -1, li: -1 },
         { find: 'two', replace: '2', fi: -1, li: -1 },
         { find: 'three', replace: '3', fi: -1, li: -1 },
@@ -18,22 +18,22 @@ const replaceFirstAndLastWords = (str) => {
         { find: 'nine', replace: '9', fi: -1, li: -1 },
     ]
 
-    dict.forEach(o => {
+    infoDict.forEach(o => {
         o.fi = str.indexOf(o.find);
         o.li = str.lastIndexOf(o.find);
     })
 
-    const firstWordIndex = 
-        _.sortBy(_.filter(dict, o => o.fi > -1), 'fi').at(0)
+    const firstWordInfo = 
+        _.sortBy(_.filter(infoDict, o => o.fi > -1), 'fi').at(0)
 
-    const lastWordIndex = 
-        _.sortBy(_.filter(dict, o => o.li > -1), 'li').at(-1)
+    const lastWordInfo = 
+        _.sortBy(_.filter(infoDict, o => o.li > -1), 'li').at(-1)
 
-    if (firstWordIndex)
-        str = insertAt(str, firstWordIndex.replace, firstWordIndex.fi)
+    if (firstWordInfo)
+        str = insertAt(str, firstWordInfo.replace, firstWordInfo.fi)
 
-    if (lastWordIndex)
-        str = insertAt(str, lastWordIndex.replace, lastWordIndex.li + (firstWordIndex ? 1 : 0))
+    if (lastWordInfo)
+        str = insertAt(str, lastWordInfo.replace, lastWordInfo.li + (firstWordInfo ? 1 : 0))
 
     return str;
 };

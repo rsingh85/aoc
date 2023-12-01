@@ -24,16 +24,10 @@ const replaceFirstAndLastWords = (str) => {
     })
 
     const firstWordIndex = 
-        _.sortBy(
-           _.filter(dict, o => o.fi > -1),
-            'fi'
-        ).at(0)
+        _.sortBy(_.filter(dict, o => o.fi > -1), 'fi').at(0)
 
     const lastWordIndex = 
-        _.sortBy(
-           _.filter(dict, o => o.li > -1),
-            'li'
-        ).at(-1)
+        _.sortBy(_.filter(dict, o => o.li > -1), 'li').at(-1)
 
     if (firstWordIndex)
         str = insertAt(str, firstWordIndex.replace, firstWordIndex.fi)

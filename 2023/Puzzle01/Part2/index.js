@@ -35,7 +35,7 @@ const replaceFirstAndLastWords = (str) => {
     if (lastWordInfo)
         str = insertAt(str, lastWordInfo.replace, lastWordInfo.li + (firstWordInfo ? 1 : 0))
 
-    return str;
+    return str
 };
 
 const sum = input

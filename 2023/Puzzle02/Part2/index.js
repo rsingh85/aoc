@@ -32,6 +32,7 @@ for (let g = 0; g < games.length; g++) {
         set.filter(s => s.colour === 'green').forEach(s => greenCounts.push(s.count))
         set.filter(s => s.colour === 'blue').forEach(s => blueCounts.push(s.count))
     }
+    
     powers.push(
         _.sortBy(_.filter(redCounts)).at(-1) * 
         _.sortBy(_.filter(greenCounts)).at(-1) * 

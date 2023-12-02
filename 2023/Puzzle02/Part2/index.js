@@ -35,9 +35,9 @@ for (let g = 0; g < games.length; g++) {
 
     const maxRedCount = _.sortBy(_.filter(redCounts)).at(-1)
     const maxGreenCount = _.sortBy(_.filter(greenCounts)).at(-1)
-    const maxBluCount = _.sortBy(_.filter(blueCounts)).at(-1)
+    const maxBlueCount = _.sortBy(_.filter(blueCounts)).at(-1)
 
-    powers.push(maxRedCount * maxGreenCount * maxBluCount)
+    powers.push(maxRedCount * maxGreenCount * maxBlueCount)
 }
 
 console.log(powers.reduce((acc, curr) => acc + curr))

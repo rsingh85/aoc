@@ -1,4 +1,4 @@
-const _ = require('underscore');
+const _ = require('underscore')
 const readFileSyncIntoString = require('../../Core/ReadFileSyncIntoString')
 const input = readFileSyncIntoString('./data.txt').split('\n')
 
@@ -34,9 +34,9 @@ for (let g = 0; g < games.length; g++) {
     }
     
     powers.push(
-        _.sortBy(_.filter(redCounts)).at(-1) * 
-        _.sortBy(_.filter(greenCounts)).at(-1) * 
-        _.sortBy(_.filter(blueCounts)).at(-1))
+        _.sortBy(redCounts).at(-1) * 
+        _.sortBy(greenCounts).at(-1) * 
+        _.sortBy(blueCounts).at(-1))
 }
 
 console.log(powers.reduce((acc, curr) => acc + curr))

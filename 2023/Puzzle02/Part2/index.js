@@ -32,12 +32,10 @@ for (let g = 0; g < games.length; g++) {
         set.filter(s => s.colour === 'green').forEach(s => greenCounts.push(s.count))
         set.filter(s => s.colour === 'blue').forEach(s => blueCounts.push(s.count))
     }
-
-    const maxRedCount = _.sortBy(_.filter(redCounts)).at(-1)
-    const maxGreenCount = _.sortBy(_.filter(greenCounts)).at(-1)
-    const maxBlueCount = _.sortBy(_.filter(blueCounts)).at(-1)
-
-    powers.push(maxRedCount * maxGreenCount * maxBlueCount)
+    powers.push(
+        _.sortBy(_.filter(redCounts)).at(-1) * 
+        _.sortBy(_.filter(greenCounts)).at(-1) * 
+        _.sortBy(_.filter(blueCounts)).at(-1))
 }
 
 console.log(powers.reduce((acc, curr) => acc + curr))

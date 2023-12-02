@@ -26,7 +26,7 @@ for (let g = 0; g < games.length; g++) {
     let redCounts = [], greenCounts = [], blueCounts = []
 
     for (var s = 0; s < game.sets.length; s++) {
-        const set = game.sets[s];
+        const set = game.sets[s]
 
         set.filter(s => s.colour === 'red').forEach(s => redCounts.push(s.count))
         set.filter(s => s.colour === 'green').forEach(s => greenCounts.push(s.count))

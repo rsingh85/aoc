@@ -36,7 +36,7 @@ const replaceFirstAndLastNumberWords = (str) => {
 const sum = input
     .map(l => replaceFirstAndLastNumberWords(l))
     .map(l => l.replaceAll(/[^\d]/g, ''))
-    .map(n => Number(n[0] + n[n.length - 1]))
+    .map(n => Number(n.at(0) + n.at(-1)))
     .reduce((acc, curr) => acc + curr)
 
 console.log(sum)

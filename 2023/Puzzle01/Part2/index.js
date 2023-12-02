@@ -1,4 +1,4 @@
-const _ = require('underscore');
+const _ = require('underscore')
 const readFileSyncIntoString = require('../../Core/ReadFileSyncIntoString')
 const input = readFileSyncIntoString('./data.txt').split('\n')
 

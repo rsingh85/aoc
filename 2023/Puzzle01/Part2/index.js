@@ -19,8 +19,8 @@ const replaceFirstAndLastWords = (str) => {
     ]
 
     infoDict.forEach(o => {
-        o.fi = str.indexOf(o.find);
-        o.li = str.lastIndexOf(o.find);
+        o.fi = str.indexOf(o.find)
+        o.li = str.lastIndexOf(o.find)
     })
 
     const firstWordInfo = 
@@ -36,7 +36,7 @@ const replaceFirstAndLastWords = (str) => {
         str = insertAt(str, lastWordInfo.replace, lastWordInfo.li + (firstWordInfo ? 1 : 0))
 
     return str
-};
+}
 
 const sum = input
     .map(l => replaceFirstAndLastWords(l))

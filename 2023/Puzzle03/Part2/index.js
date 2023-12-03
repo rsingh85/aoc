@@ -37,8 +37,6 @@ for (let r = 0; r < input.length; r++) {
     let currentNumber = ''
     let currentNumberIsPotentialGearResult = {}
     let currentNumberIsPotentialGear = false
-    let currentNumberGearRatioLocationR = -1;
-    let currentNumberGearRatioLocationC = -1;
 
     for (let c = 0; c < input[r].length; c++) {
         const current = input[r].charAt(c)

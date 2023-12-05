@@ -15,7 +15,7 @@ const mapToObject = (line) => {
 }
 
 const cards = input.map(l => mapToObject(l))
-let totalCards = 0;
+let totalCards = 0
 
 for (let i = 0; i < cards.length; i++) {
     const currentCard = cards[i]

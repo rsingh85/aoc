@@ -1,4 +1,4 @@
-const lcm = require( 'compute-lcm' );
+const lcm = require('compute-lcm')
 const readFileSyncIntoString = require('../../Core/ReadFileSyncIntoString')
 const input = readFileSyncIntoString('./data.txt').split('\n')
 

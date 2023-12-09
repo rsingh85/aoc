@@ -34,7 +34,6 @@ const mapToHand = (line) => {
         },
         isFullHouse: function() {
             // Full house, where three cards have the same label, and the remaining two cards share a different label: 23332
-            
             if (this.isThreeOfAKind()) return false
             
             for (let i = 0; i < this.hand.length; i++) {

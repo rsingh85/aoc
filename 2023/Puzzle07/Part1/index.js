@@ -25,22 +25,26 @@ const mapToHand = (line) => {
         },
         isFiveOfAKind: function() {
             // Five of a kind, where all five cards have the same label: AAAAA
-            return this.hand.every(c => c === this.hand[0])
+            return this.hand.every(c => c == this.hand[0])
         },
         isFourOfAKind: function() {
             // Four of a kind, where four cards have the same label and one card has a different label: AA8AA
-            return this.hand.filter(c => c === this.hand[0]).length === 4 ||
-                this.hand.filter(c => c === this.hand[1]).length === 4
+            return this.hand.filter(c => c == this.hand[0]).length === 4 ||
+                this.hand.filter(c => c == this.hand[1]).length === 4
         },
         isFullHouse: function() {
             // Full house, where three cards have the same label, and the remaining two cards share a different label: 23332
+            
+            if (this.isThreeOfAKind()) return false
+            
             for (let i = 0; i < this.hand.length; i++) {
                 const card = this.hand[i]
 
-                if (this.hand.filter(c => c === card).length === 3) {
+                if (this.hand.filter(c => c == card).length === 3) {
                     const otherTwoCards = this.hand.filter(c => c !== card)
 
-                    if (otherTwoCards.length === 2)
+                    if (!this.hand.filter(c => c == card).includes(otherTwoCards[0]) &&
+                            !this.hand.filter(c => c == card).includes(otherTwoCards[1]))
                         return true
                 }
             }
@@ -52,10 +56,11 @@ const mapToHand = (line) => {
             for (let i = 0; i < this.hand.length; i++) {
                 const card = this.hand[i]
 
-                if (this.hand.filter(c => c === card).length === 3) {
-                    const otherTwoCards = this.hand.filter(c => c !== card)
+                if (this.hand.filter(c => c == card).length === 3) {
+                    const otherTwoCards = this.hand.filter(c => c != card)
 
-                    if (new Set(otherTwoCards).length === 2)
+                    if (this.hand.filter(c => c == otherTwoCards[0]).length === 1 && 
+                            this.hand.filter(c => c == otherTwoCards[1]).length)
                         return true
                 }
             }
@@ -69,7 +74,7 @@ const mapToHand = (line) => {
             for (let i = 0; i < this.hand.length; i++) {
                 const card = this.hand[i]
 
-                if (this.hand.filter(c => c === card).length === 2) {
+                if (this.hand.filter(c => c == card).length === 2) {
                     if (!pairChars.includes(card)) {
                         pairChars.push(card)
                     }
@@ -87,10 +92,10 @@ const mapToHand = (line) => {
             for (let i = 0; i < this.hand.length; i++) {
                 const card = this.hand[i]
 
-                if (this.hand.filter(c => c === card).length === 2) {
-                    const otherThreeCards = this.hand.filter(c => c !== card)
+                if (this.hand.filter(c => c == card).length === 2) {
+                    const otherThreeCards = this.hand.filter(c => c != card)
 
-                    if (new Set(otherThreeCards).length === 3)
+                    if (new Set(otherThreeCards).size === 3)
                         return true
                 }
             }
@@ -99,12 +104,29 @@ const mapToHand = (line) => {
         },
         isHighCard: function() {
             // High card, where all cards' labels are distinct: 23456
-            return new Set(this.hand).length === this.hand.length
+            return new Set(this.hand).size === this.hand.length
         }
     }
 }
 
 const hands = input.map(l => mapToHand(l))
+
+/*
+const debug = hands.map(h => {
+    console.log(`${h.hand.join('')} - ${h.bid}`)
+    console.log(`SortRank = ${h.getSortRank()}`)
+    console.log(`isFiveOfAKind = ${h.isFiveOfAKind()}`)
+    console.log(`isFourOfAKind = ${h.isFourOfAKind()}`)
+    console.log(`isFullHouse = ${h.isFullHouse()}`)
+    console.log(`isThreeOfAKind = ${h.isThreeOfAKind()}`)
+    console.log(`isTwoPair = ${h.isTwoPair()}`)
+    console.log(`isOnePair = ${h.isOnePair()}`)
+    console.log(`isHighCard = ${h.isHighCard()}`)
+    console.log('\n')
+})
+return
+*/
+
 
 hands.sort((cardA, cardB) => {
     const cardASortRank = cardA.getSortRank()

@@ -9,6 +9,7 @@
   "author": "Ravinder Singh",
   "license": "ISC",
   "dependencies": {
+    "compute-lcm": "^1.1.2",
     "underscore": "^1.13.6"
   }
 }

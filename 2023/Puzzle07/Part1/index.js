@@ -1,16 +1,28 @@
 const readFileSyncIntoString = require('../../Core/ReadFileSyncIntoString')
 const input = readFileSyncIntoString('./data.txt').split('\n')
 
-
-const str = 'AAAA1'
-console.log()
-
-return
-
 const mapToHand = (line) => {
     return {
         hand: [...line.split(' ')[0]],
         bid: Number(line.split(' ')[1]),
+        getSortRank: function() {
+            if (this.isFiveOfAKind())
+                return 7
+            else if (this.isFourOfAKind())
+                return 6
+            else if (this.isFullHouse()) 
+                return 5
+            else if (this.isThreeOfAKind())
+                return 4
+            else if (this.isTwoPair())
+                return 3
+            else if (this.isOnePair())
+                return 2
+            else if (this.isHighCard())
+                return 1
+
+            return -1
+        },
         isFiveOfAKind: function() {
             // Five of a kind, where all five cards have the same label: AAAAA
             return this.hand.every(c => c === this.hand[0])
@@ -93,8 +105,45 @@ const mapToHand = (line) => {
 }
 
 const hands = input.map(l => mapToHand(l))
-hands.sort((cardA, cardB) => {
 
+hands.sort((cardA, cardB) => {
+    const cardASortRank = cardA.getSortRank()
+    const cardBSortRank = cardB.getSortRank()
+
+    if (cardASortRank < cardBSortRank)
+        return -1
+
+    if (cardASortRank > cardBSortRank)
+        return 1
+
+    const dict = {
+        'A': 13, 'K': 12,
+        'Q': 11, 'J': 10,
+        'T': 9, '9': 8,
+        '8': 7, '7': 6,
+        '6': 5, '5': 4,
+        '4': 3, '3': 2,
+        '2': 1
+    }
+
+    // todo: compare card by card
+    for (let i = 0; i < cardA.hand.length; i++) {
+        if (dict[cardA.hand[i]] === dict[cardB.hand[i]])
+            continue
+        
+        if (dict[cardA.hand[i]] < dict[cardB.hand[i]])
+            return -1
+        
+        if (dict[cardA.hand[i]] > dict[cardB.hand[i]])
+            return 1
+    }
+    return 0
 })
 
-console.log(hands)
+let total = 0
+
+for (let i = 0; i < hands.length; i++) {
+    total += hands[i].bid * (i + 1)
+}
+
+console.log(total)

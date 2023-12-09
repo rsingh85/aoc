@@ -4,6 +4,7 @@ const input = readFileSyncIntoString('./data.txt').split('\n')
 const mapToHand = (line) => {
     return {
         cards: [...line.split(' ')[0]],
+        originalCards: [...line.split(' ')[0]],
         bid: Number(line.split(' ')[1]),
         getSortRank: function() {
             if (this.isFiveOfAKind())
@@ -108,7 +109,35 @@ const mapToHand = (line) => {
     }
 }
 
-const hands = input.map(l => mapToHand(l))
+const getMostFrequentCard = (hand) => {
+    const cardFrequency = {}
+    
+    hand.cards
+        .filter(c => c != 'J')
+        .forEach(c => cardFrequency[c] = (cardFrequency[c] || 0) + 1)
+    
+    return Object.keys(cardFrequency)
+        .reduce((a, b) => cardFrequency[a] > cardFrequency[b] ? a : b, hand.cards[0])
+}
+
+const processWildcard = (hand) => {
+    const mostFrequentCard = getMostFrequentCard(hand)
+
+    if (hand.cards.includes('J')) {
+        for (let i = 0; i < hand.cards.length; i++) {
+            const card = hand.cards[i]
+
+            if (card == 'J') 
+                hand.cards[i] = mostFrequentCard
+        }
+    }
+
+    return hand
+}
+
+const hands = input
+    .map(l => mapToHand(l))
+    .map(h => processWildcard(h))
 
 hands.sort((handA, handB) => {
     const handASortRank = handA.getSortRank()
@@ -122,7 +151,7 @@ hands.sort((handA, handB) => {
 
     const dict = {
         'A': 13, 'K': 12,
-        'Q': 11, 'J': 10,
+        'Q': 11, 'J': 0,
         'T': 9, '9': 8,
         '8': 7, '7': 6,
         '6': 5, '5': 4,
@@ -130,14 +159,14 @@ hands.sort((handA, handB) => {
         '2': 1
     }
 
-    for (let i = 0; i < handA.cards.length; i++) {
-        if (dict[handA.cards[i]] === dict[handB.cards[i]])
+    for (let i = 0; i < handA.originalCards.length; i++) {
+        if (dict[handA.originalCards[i]] === dict[handB.originalCards[i]])
             continue
         
-        if (dict[handA.cards[i]] < dict[handB.cards[i]])
+        if (dict[handA.originalCards[i]] < dict[handB.originalCards[i]])
             return -1
         
-        if (dict[handA.cards[i]] > dict[handB.cards[i]])
+        if (dict[handA.originalCards[i]] > dict[handB.originalCards[i]])
             return 1
     }
     return 0

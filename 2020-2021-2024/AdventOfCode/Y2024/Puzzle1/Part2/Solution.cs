@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Y2024.Puzzle1.Part1
+﻿namespace AdventOfCode.Y2024.Puzzle1.Part2
 {
     public class Solution : ISolution
     {
@@ -16,16 +16,14 @@
                 right.Add(int.Parse(split[1]));
             }
 
-            left.Sort();
-            right.Sort();
-            var diffSum = 0;
+            var similarityScore = 0;
 
             for (var i = 0; i < lines.Length; i++)
             {
-                diffSum += Math.Max(left[i], right[i]) - Math.Min(left[i], right[i]);
+                similarityScore += left[i] * right.Where(n => n == left[i]).Count();
             }
 
-            Console.WriteLine(diffSum);
+            Console.WriteLine(similarityScore);
         }
     }
 }

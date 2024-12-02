@@ -10,13 +10,12 @@
             foreach (var report in reports)
             {
                 var levels = report.Split(' ').Select(int.Parse).ToArray();
-                var permutations = GetLevelPermutations(levels);
                 
                 if (IsReportSafe(levels))
                     safeReports++;
                 else
                 {
-                    foreach (var permutation in permutations)
+                    foreach (var permutation in GetLevelPermutations(levels))
                     {
                         if (IsReportSafe(permutation))
                         {

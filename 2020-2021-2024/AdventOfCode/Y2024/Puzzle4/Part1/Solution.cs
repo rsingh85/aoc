@@ -15,7 +15,7 @@
                 {
                     var wordsInAllDirections = new List<string> {
                         GetWordInDirection(r, c, searchWord.Length, lines, Direction.U),
-                        GetWordInDirection(r, c, searchWord.Length, lines, Direction.UR),
+                        GetWordInDirection(r, c, searchWord.Length, lines, Direction.RU),
                         GetWordInDirection(r, c, searchWord.Length, lines, Direction.R),
                         GetWordInDirection(r, c, searchWord.Length, lines, Direction.RD),
                         GetWordInDirection(r, c, searchWord.Length, lines, Direction.D),
@@ -35,7 +35,7 @@
             Console.WriteLine(occurrences);
         }
 
-        private string GetWordInDirection(int r, int c, int length, string[] lines, Direction direction)
+        private static string GetWordInDirection(int r, int c, int length, string[] lines, Direction direction)
         {
             var word = string.Empty;
 
@@ -47,10 +47,7 @@
                 r = nextPosition.r;
                 c = nextPosition.c;
 
-                if (r < 0 || r >= lines.Length)
-                    return word;
-
-                if (c < 0 || c >= lines[r].Length)
+                if (!IsInBounds(r, c, lines))
                     return word;
 
                 word += lines[r][c];
@@ -59,12 +56,14 @@
             return word;
         }
 
-        private (int r, int c) GetNextPositionByDirection(int r, int c, Direction direction)
-        {
-            return direction switch
+        private static bool IsInBounds(int r, int c, string[] lines) =>
+             r >= 0 && r < lines.Length && c >= 0 && c < lines[r].Length;
+
+        private static (int r, int c) GetNextPositionByDirection(int r, int c, Direction direction) => 
+            direction switch
             {
                 Direction.U => (r - 1, c),
-                Direction.UR => (r - 1, c + 1),
+                Direction.RU => (r - 1, c + 1),
                 Direction.R => (r, c + 1),
                 Direction.RD => (r + 1, c + 1),
                 Direction.D => (r + 1, c),
@@ -73,11 +72,10 @@
                 Direction.LU => (r - 1, c - 1),
                 _ => (-1, -1),
             };
-        }
-        
+
         private enum Direction
         {
-            U, UR, R, RD, D, LD, L, LU
+            U, RU, R, RD, D, LD, L, LU
         }
     }
 }

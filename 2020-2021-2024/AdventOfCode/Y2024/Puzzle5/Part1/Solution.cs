@@ -42,7 +42,7 @@
             Console.WriteLine(middlePageSum);
         }
 
-        private bool IsUpdatePageOrderValid(List<int> update, List<Rule> applicableRules)
+        private static bool IsUpdatePageOrderValid(List<int> update, List<Rule> applicableRules)
         {
             foreach (var page in update)
             {

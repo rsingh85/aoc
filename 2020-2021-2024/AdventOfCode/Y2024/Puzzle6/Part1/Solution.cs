@@ -9,11 +9,11 @@
 
             var guardPosition = GetGuardPosition(grid);
             var guardInBounds = true;
-            var distinctPositions = new HashSet<string>();
+            var distinctPositions = new HashSet<(int, int)>();
 
             while (guardInBounds)
             {
-                distinctPositions.Add($"[{guardPosition.r},{guardPosition.c}]");
+                distinctPositions.Add((guardPosition.r,guardPosition.c));
 
                 var guard = grid[guardPosition.r, guardPosition.c];
                 var nextGuardPosition = GetNextPosition(guardPosition.r, guardPosition.c, guard);

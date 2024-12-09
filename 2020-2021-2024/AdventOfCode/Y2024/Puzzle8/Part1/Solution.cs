@@ -61,8 +61,7 @@
                         var currentLocationAntiNodeR = currentLocation.r - (otherLocation.r - currentLocation.r);
                         var currentLocationAntiNodeC = currentLocation.c - (otherLocation.c - currentLocation.c);
 
-                        if (IsLocationInBounds(currentLocationAntiNodeR, currentLocationAntiNodeC, grid.GetLength(0), grid.GetLength(1))
-                            )
+                        if (IsLocationInBounds(currentLocationAntiNodeR, currentLocationAntiNodeC, grid.GetLength(0), grid.GetLength(1)))
                         {
                             grid[currentLocationAntiNodeR, currentLocationAntiNodeC] = '#';
                             antiNodeLocationSet.Add((currentLocationAntiNodeR, currentLocationAntiNodeC));

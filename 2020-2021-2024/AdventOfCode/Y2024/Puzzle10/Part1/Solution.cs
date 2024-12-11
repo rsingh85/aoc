@@ -42,7 +42,6 @@
 
             if (current == '9')
             {
-                // If this target hasn't already been reached by the same trailhead, ignore this count
                 if (uniqueTrailHeadsReachingTarget.Add($"({currentCoords.r},{currentCoords.c})reachedFrom({trailhead.r},{trailhead.c})"))
                     return 1;
 

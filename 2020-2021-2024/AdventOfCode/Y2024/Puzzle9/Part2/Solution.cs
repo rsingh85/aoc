@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace AdventOfCode.Y2024.Puzzle9.Part2
+﻿namespace AdventOfCode.Y2024.Puzzle9.Part2
 {
     public class Solution : ISolution
     {
@@ -81,7 +79,6 @@ namespace AdventOfCode.Y2024.Puzzle9.Part2
 
                 processedFileIds.Add(block.FileId!.Value);
 
-                //var nextFileBlocks = Regex.Match(string.Join(string.Empty, blocks), $"{block}+").Value.ToArray().Select(c => c.ToString()).ToList();
                 var nextFileBlocks = blocks.Where(b => b.IsFile && b.FileId.HasValue && b.FileId == block.FileId.Value).ToList();
                 return nextFileBlocks;
             }
@@ -139,9 +136,6 @@ namespace AdventOfCode.Y2024.Puzzle9.Part2
         public bool IsFile => FileId.HasValue;
         public long? FileId { get; set; }
 
-        public override string ToString()
-        {
-            return IsFree ? "." : $"{FileId}";
-        }
+        public override string ToString() => IsFree ? "." : $"{FileId}";
     }
 }

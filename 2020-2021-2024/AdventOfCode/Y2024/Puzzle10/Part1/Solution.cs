@@ -34,7 +34,7 @@
             Console.WriteLine("Total Trailhead score: {0}", scoreSum);
         }
 
-        private static HashSet<string> uniqueTrailHeadsReachingTarget = new HashSet<string>();
+        private static HashSet<string> uniqueTrailHeadsReachingTarget = new();
 
         private static int FindPaths((int r, int c) trailhead, (int r, int c) currentCoords, char[,] grid)
         {

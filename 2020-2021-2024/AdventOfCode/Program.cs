@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            ISolution solution = new Y2024.Puzzle9.Part2.Solution();
+            ISolution solution = new Y2024.Puzzle10.Part1.Solution();
 
             Console.WriteLine(solution.GetType().Namespace);
 

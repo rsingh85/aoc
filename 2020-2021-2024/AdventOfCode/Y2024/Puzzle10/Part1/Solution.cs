@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Data;
-
-namespace AdventOfCode.Y2024.Puzzle10.Part1
+﻿namespace AdventOfCode.Y2024.Puzzle10.Part1
 {
     public class Solution : ISolution
     {

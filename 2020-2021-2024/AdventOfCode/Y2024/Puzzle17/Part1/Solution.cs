@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace AdventOfCode.Y2024.Puzzle17.Part1
+﻿namespace AdventOfCode.Y2024.Puzzle17.Part1
 {
     public class Solution : ISolution
     {

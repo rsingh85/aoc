@@ -23,16 +23,10 @@
         }
     }
 
-    public class Dial
+    public class Dial(int totalRotations, int currentPosition)
     {
-        private readonly int _totalRotations;
-        public int CurrentPosition { get; private set; }
-
-        public Dial(int totalRotations, int currentPosition)
-        {
-            _totalRotations = totalRotations + 1;
-            CurrentPosition = currentPosition;
-        }
+        private readonly int _totalRotations = totalRotations + 1;
+        public int CurrentPosition { get; private set; } = currentPosition;
 
         public void Rotate(int rotations, char direction)
         {

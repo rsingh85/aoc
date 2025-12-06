@@ -15,10 +15,11 @@
                     grid[r, c] = lines[r][c];
 
             var totalRemoved = 0;
+            var positionsForRemoval = new List<(int r, int c)>();
 
             while (true)
             {
-                var removePositions = new List<(int r, int c)>();
+                positionsForRemoval.Clear();
 
                 for (var r = 0; r < grid.GetLength(0); r++)
                 {
@@ -42,16 +43,16 @@
                         };
 
                         if (adjacents.Count(a => a == '@') < AdjacentRollsThreshold)
-                            removePositions.Add((r, c));
+                            positionsForRemoval.Add((r, c));
                     }
                 }
 
-                totalRemoved += removePositions.Count;
+                totalRemoved += positionsForRemoval.Count;
 
-                if (!removePositions.Any())
+                if (positionsForRemoval.Count == 0)
                     break;
 
-                foreach (var (r, c) in removePositions)
+                foreach (var (r, c) in positionsForRemoval)
                     grid[r, c] = '.';
             }
 

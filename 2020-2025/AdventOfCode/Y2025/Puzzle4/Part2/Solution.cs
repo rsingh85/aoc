@@ -48,7 +48,7 @@
 
                 totalRemoved += removePositions.Count;
 
-                if (removePositions.Count == 0)
+                if (!removePositions.Any())
                     break;
 
                 foreach (var (r, c) in removePositions)

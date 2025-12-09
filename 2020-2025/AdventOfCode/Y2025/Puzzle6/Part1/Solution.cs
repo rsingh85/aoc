@@ -13,7 +13,6 @@
 
             for (var colIndex = 0; colIndex < lines.First().Length; colIndex++)
                 columnIndexResultsDict.Add(colIndex, long.Parse(lines[0][colIndex]));
-            
 
             for (var colIndex = 0; colIndex < lines.First().Length; colIndex++)
             {

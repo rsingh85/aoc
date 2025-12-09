@@ -36,7 +36,6 @@
                 }
             }
 
-
             Console.WriteLine(freshIngredients);
         }
     }
